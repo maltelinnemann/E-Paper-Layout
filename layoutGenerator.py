@@ -40,7 +40,7 @@ def generate_layout():
     # Wetter Heute
     draw.text((125, 270), "Heute", font=font_medium, fill=BLACK)
     draw.text((100, 400), "20,1°C   90%", font=font_small, fill=BLACK)
-    img_red.paste(sunIcon, (175 - math.ceil(sunIcon.width / 2), 320))
+    img_red.paste(sunIcon, (165 - math.ceil(sunIcon.width / 2), 320))
 
     # Wetter Morgen
     draw.text((400, 270), "Morgen", font=font_medium, fill=BLACK)
@@ -50,7 +50,7 @@ def generate_layout():
     # Wetter Übermorgen
     draw.text((575, 270), "Dienstag", font=font_medium, fill=BLACK)
     draw.text((600, 400), "25,9°C", font=font_small, fill=BLACK)
-    img_red.paste(rainIcon, (635 - math.ceil(rainIcon.width / 2), 320))
+    img_red.paste(rainIcon, (638 - math.ceil(rainIcon.width / 2), 320))
 
     # Speichern zur Vorschau
     img_black.save("Images/layout_black.bmp")
