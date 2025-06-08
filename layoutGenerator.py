@@ -39,17 +39,17 @@ def generate_layout():
 
     # Wetter Heute
     draw.text((120, 270), "Heute", font=font_medium, fill=BLACK)
-    draw.text((75, 400), "20,1°C   90%", font=font_small, fill=BLACK)
-    img_red.paste(sunIcon, (170 - math.ceil(sunIcon.width / 2), 320))
+    draw.text((75, 405), "20,1°C   90%", font=font_small, fill=BLACK)
+    img_red.paste(sunIcon, (175 - math.ceil(sunIcon.width / 2), 320))
 
     # Wetter Morgen
     draw.text((400, 270), "Morgen", font=font_medium, fill=BLACK)
-    draw.text((412, 400), "16,1°C", font=font_small, fill=BLACK)
-    img_red.paste(cloudIcon, (470 - math.ceil(cloudIcon.width / 2), 310))
+    draw.text((412, 405), "16,1°C", font=font_small, fill=BLACK)
+    img_red.paste(cloudIcon, (475 - math.ceil(cloudIcon.width / 2), 310))
 
     # Wetter Übermorgen
     draw.text((575, 270), "Dienstag", font=font_medium, fill=BLACK)
-    draw.text((600, 400), "25,9°C", font=font_small, fill=BLACK)
+    draw.text((600, 405), "25,9°C", font=font_small, fill=BLACK)
     img_red.paste(rainIcon, (655 - math.ceil(rainIcon.width / 2), 320))
 
     # Speichern zur Vorschau
