@@ -7,7 +7,7 @@ from lib import epd7in5b_V2
 def display_image(black_image_path, red_image_path):
     import logging
     from PIL import Image
-    from waveshare_epd import epd7in5b_V2
+    from lib import epd7in5b_V2
 
     # Initialize the display
     epd = epd7in5b_V2.EPD()
