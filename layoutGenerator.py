@@ -18,9 +18,9 @@ def generate_layout():
     draw_red = ImageDraw.Draw(img_red)
 
     # Schriftarten laden
-    font_large = ImageFont.truetype("fonts/DejaVuSans-Bold.ttf", 38)
-    font_medium = ImageFont.truetype("fonts/DejaVuSans.ttf", 28)
-    font_small = ImageFont.truetype("fonts/DejaVuSans.ttf", 22)
+    font_large = ImageFont.truetype("fonts/DejaVuSans-Bold.ttf", 42)
+    font_medium = ImageFont.truetype("fonts/DejaVuSans.ttf", 32)
+    font_small = ImageFont.truetype("fonts/DejaVuSans.ttf", 26)
 
     # Icons laden 
     sunIcon = Image.open("icons/sun.png").convert("1").resize((70, 70), Image.LANCZOS)
