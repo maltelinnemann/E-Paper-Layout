@@ -47,17 +47,17 @@ def generate_layout():
     # Wetter Heute
     draw.text((120, 270), "Heute", font=font_medium, fill=BLACK)
     draw.text((75, 405), f"{layout.days[0].temperature}°C  90%", font=font_small, fill=BLACK)
-    img_red.paste(iconDay(layout.days[0]), (175 - math.ceil(iconDay(layout.days[0]).width / 2), 320 if layout.days[0] == cloudIcon else 310))
+    img_red.paste(iconDay(layout.days[0]), (175 - math.ceil(iconDay(layout.days[0]).width / 2), 330 if layout.days[0] == cloudIcon else 310))
 
     # Wetter Morgen
     draw.text((400, 270), "Morgen", font=font_medium, fill=BLACK)
     draw.text((412, 405), f"{layout.days[1].temperature}°C", font=font_small, fill=BLACK)
-    img_red.paste(iconDay(layout.days[1]), (475 - math.ceil(iconDay(layout.days[1]).width / 2), 320 if layout.days[1] == cloudIcon else 300))
+    img_red.paste(iconDay(layout.days[1]), (475 - math.ceil(iconDay(layout.days[1]).width / 2), 330 if layout.days[1] == cloudIcon else 310))
 
     # Wetter Übermorgen
     draw.text((575, 270), layout.days[2].name, font=font_medium, fill=BLACK)
     draw.text((600, 405), f"{layout.days[2].temperature}°C", font=font_small, fill=BLACK)
-    img_red.paste(iconDay(layout.days[2]), (655 - math.ceil(iconDay(layout.days[2]).width / 2), 320 if layout.days[2] == cloudIcon else 300))
+    img_red.paste(iconDay(layout.days[2]), (655 - math.ceil(iconDay(layout.days[2]).width / 2), 330 if layout.days[2] == cloudIcon else 310))
 
     # Speichern zur Vorschau
     img_black.save("Images/layout_black.bmp")
