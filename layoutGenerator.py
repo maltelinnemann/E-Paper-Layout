@@ -23,9 +23,9 @@ def generate_layout():
     font_small = ImageFont.truetype("fonts/DejaVuSans.ttf", 34)
 
     # Icons laden 
-    sunIcon = Image.open("icons/sun.png").convert("1").resize((70, 70), Image.LANCZOS)
-    rainIcon = Image.open("icons/rain.png").convert("1").resize((70, 70), Image.LANCZOS)
-    cloudIcon = Image.open("icons/cloud.png").convert("1").resize((70, 70), Image.LANCZOS)
+    sunIcon = Image.open("icons/sun.png").convert("1").resize((80, 80), Image.LANCZOS)
+    rainIcon = Image.open("icons/rain.png").convert("1").resize((80, 80), Image.LANCZOS)
+    cloudIcon = Image.open("icons/cloud.png").convert("1").resize((80, 80), Image.LANCZOS)
     
     # Datum
     draw.text((80, 50), "Sonntag, 8. Juni 2025", font=font_large, fill=BLACK)
@@ -40,17 +40,17 @@ def generate_layout():
     # Wetter Heute
     draw.text((120, 270), "Heute", font=font_medium, fill=BLACK)
     draw.text((75, 400), "20,1°C   90%", font=font_small, fill=BLACK)
-    img_red.paste(sunIcon, (165 - math.ceil(sunIcon.width / 2), 320))
+    img_red.paste(sunIcon, (170 - math.ceil(sunIcon.width / 2), 320))
 
     # Wetter Morgen
     draw.text((400, 270), "Morgen", font=font_medium, fill=BLACK)
     draw.text((412, 400), "16,1°C", font=font_small, fill=BLACK)
-    img_red.paste(cloudIcon, (455 - math.ceil(cloudIcon.width / 2), 310))
+    img_red.paste(cloudIcon, (470 - math.ceil(cloudIcon.width / 2), 310))
 
     # Wetter Übermorgen
     draw.text((575, 270), "Dienstag", font=font_medium, fill=BLACK)
     draw.text((600, 400), "25,9°C", font=font_small, fill=BLACK)
-    img_red.paste(rainIcon, (638 - math.ceil(rainIcon.width / 2), 320))
+    img_red.paste(rainIcon, (655 - math.ceil(rainIcon.width / 2), 320))
 
     # Speichern zur Vorschau
     img_black.save("Images/layout_black.bmp")
