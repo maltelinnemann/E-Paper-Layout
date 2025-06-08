@@ -19,8 +19,8 @@ def generate_layout():
 
     # Schriftarten laden
     font_large = ImageFont.truetype("fonts/DejaVuSans-Bold.ttf", 46)
-    font_medium = ImageFont.truetype("fonts/DejaVuSans.ttf", 36)
-    font_small = ImageFont.truetype("fonts/DejaVuSans.ttf", 32)
+    font_medium = ImageFont.truetype("fonts/DejaVuSans.ttf", 38)
+    font_small = ImageFont.truetype("fonts/DejaVuSans.ttf", 34)
 
     # Icons laden 
     sunIcon = Image.open("icons/sun.png").convert("1").resize((70, 70), Image.LANCZOS)
@@ -38,13 +38,13 @@ def generate_layout():
     draw.line((330, 270, 330, HEIGHT-60), fill=BLACK, width=1)
 
     # Wetter Heute
-    draw.text((125, 270), "Heute", font=font_medium, fill=BLACK)
-    draw.text((100, 400), "20,1°C   90%", font=font_small, fill=BLACK)
+    draw.text((120, 270), "Heute", font=font_medium, fill=BLACK)
+    draw.text((75, 400), "20,1°C   90%", font=font_small, fill=BLACK)
     img_red.paste(sunIcon, (165 - math.ceil(sunIcon.width / 2), 320))
 
     # Wetter Morgen
     draw.text((400, 270), "Morgen", font=font_medium, fill=BLACK)
-    draw.text((418, 400), "16,1°C", font=font_small, fill=BLACK)
+    draw.text((412, 400), "16,1°C", font=font_small, fill=BLACK)
     img_red.paste(cloudIcon, (455 - math.ceil(cloudIcon.width / 2), 310))
 
     # Wetter Übermorgen
