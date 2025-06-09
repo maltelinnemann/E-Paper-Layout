@@ -3,6 +3,7 @@ from PIL import Image
 import os
 import sys
 from lib import epd7in5b_V2
+import layoutGenerator
 
 def display_image(black_image_path, red_image_path):
     import logging
@@ -14,6 +15,9 @@ def display_image(black_image_path, red_image_path):
     epd.init()
     logging.info("init and Clear")
     epd.Clear()
+
+    layoutGenerator.generate_layout()
+    logging.info("Layout generated")
 
     # Lade die fertigen Schwarz- und Rotbilder
     black_image = Image.open(black_image_path).convert("1").resize((epd.width, epd.height), Image.LANCZOS)
