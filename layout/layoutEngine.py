@@ -1,6 +1,7 @@
 import random
 from datetime import datetime, timedelta
 from layout import day
+from layout.sayingAPI import SayingAPI
 
 class LayoutEngine:
     def __init__(self):
@@ -25,13 +26,8 @@ class LayoutEngine:
         return self.days
     
     def set_saying(self):
-        sayings = [
-            "Ein Tag ohne Lächeln ist ein verlorener Tag.",
-            "Die beste Zeit für einen Neuanfang ist jetzt.",
-            "Lebe jeden Tag, als wäre es dein letzter.",
-            "Träume nicht dein Leben, sondern lebe deinen Traum.",
-            "Die Zukunft gehört denen, die an die Schönheit ihrer Träume glauben."
-        ]
-        self.saying = random.choice(sayings)
+        if not hasattr(self, 'saying_api'):
+            self.saying_api = SayingAPI(api_key="dilJLfYptrHC1hrJrug9mA==6a2h3hNBOQC5FkLI")
+        self.saying = self.saying_api.get_saying_within_limit(max_length=32)
         return self.saying
     

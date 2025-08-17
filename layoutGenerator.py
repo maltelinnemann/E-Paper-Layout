@@ -38,15 +38,15 @@ def generate_layout():
     draw.text((80, 50), textDate(layout), font=font_large, fill=BLACK)
 
     # Spruch
-    draw_red.text((230, 160), textSaying(layout), font=font_medium, fill=RED)
-
+    draw_red.text((150, 160), textSaying(layout), font=font_medium, fill=RED)
+    
     # Trennlinie
     draw.line((20, 240, WIDTH-20, 240), fill=BLACK, width=3)
     draw.line((330, 270, 330, HEIGHT-60), fill=BLACK, width=1)
 
     # Wetter Heute
     draw.text((120, 270), "Heute", font=font_medium, fill=BLACK)
-    draw.text((75, 405), f"{layout.days[0].temperature}°C  90%", font=font_small, fill=BLACK)
+    draw.text((118, 405), f"{layout.days[0].temperature}°C", font=font_small, fill=BLACK)
     img_red.paste(iconDay(layout.days[0]), (175 - math.ceil(iconDay(layout.days[0]).width / 2), 330 if layout.days[0] == cloudIcon else 310))
 
     # Wetter Morgen
@@ -87,7 +87,7 @@ def translateMonth(month):
     return months.get(month, month)
 
 def textSaying(layout):
-    return "Grillen , Chillen, Kiste killen"
+    return layout.saying
 
 def iconDay(day):
     if day.weather == "Clear":
